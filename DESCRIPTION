@@ -1,0 +1,24 @@
+Package: ghTrack
+Type: Package
+Title: Tools for querying the Github API
+Version: 0.1.0
+Author: person("Stephen", "Holsenbeck", email = "sholsen@alumni.emory.edu", role = c("aut", "cre"))
+Maintainer: Stephen Holsenbeck <sholsen@alumni.emory.edu>
+Description: A user-friendly set of documented functions that use the {gh} package to perform common queries of the Github API
+License: AGPL-3
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.2.3
+Roxygen: list(markdown = TRUE)
+Imports: 
+    httptest (>= 4.1.0),
+    purrr (>= 0.3.4),
+    roxygen2 (>= 7.2.3),
+    UU (>= 1.7.0),
+    vcr (>= 1.0.2.95)
+Remotes:  
+    ropensci/vcr,
+    yogat3ch/UU
+Suggests: 
+    httptest2,
+    vcr (>= 0.6.0)

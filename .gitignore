@@ -1,0 +1,12 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+
+inst/cassettes/
+
+inst/presentations/Performance_Review_2022_files/
+
+data/
+
+.DS_Store
