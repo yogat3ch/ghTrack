@@ -1,0 +1,192 @@
+---
+title: "Performance Review 2022"
+author: "Stephen Holsenbeck"
+format:
+  revealjs:
+    slide-level: 1
+    slide-number: c/t
+    fragments: true
+    scrollable: true
+    incremental: true
+    theme: 
+      - night
+      - custom.scss
+    mainfont: Poppins
+    title-slide-attributes:
+      data-background-image: virga_splash.webp
+      data-background-size: cover
+      data-background-opacity: "1"
+    footer: "© 2023 Virga Labs LLC"
+---
+```{r}
+pkg <- pkgload::pkg_path()
+devtools::load_all(pkg)
+```
+
+
+# Product + Services Contributions
+## Design and build an intuitive interface for the DMDU project
+
+----
+
+> Expressed satisfaction by users with aspects of a deliverable in post-delivery feedback session or survey.
+ 
+::: {.incremental}
+ - Phase 1 deadline met
+ - Positive feedback from Rebecca "Y'all f*ckin did it" on Phase 1 Deliverable
+ - Should I conduct a satisfaction survey or feedback session?
+:::
+----
+
+> Expressed satisfaction with usability of development tools by Virga Labs team members. Use evidenced in code.
+
+::: {.incremental}
+ - [dmdu#138@b7a052](https://github.com/Martin-McCoy/dmdu/pull/138/commits/b7a052e143e1e491efd9bc5158d034a2a4c90f1d) Keaton using `shinyVirga::col_*` functions (originally created by `golem` but packaged into `shinyVirga`)
+ - [dmdu#101@68ca51](https://github.com/Martin-McCoy/dmdu/pull/101/commits/68ca518656d137edb124a4455984464dba6e06be) Providing Tommy with overview of `shinyVirga::ui_row` functionality in code review
+ - How can I better advocate for engagement with and adoption of the programming resources?
+:::
+
+# Professional Development
+## Deepen knowledge in Javascript, SCSS and Virga Labs AWS resources
+
+----
+
+> Demonstrating expansion of knowledge/skills over time via a presentation or collaborative review
+
+```{r, echo = FALSE, results='hide'}
+contributions <- readRDS(fs::path(pkg, "contributions_2022.rds"))
+```
+```{r, echo = FALSE}
+contributions_summary(contributions) |> 
+  contributions_total() |> 
+  knitr::kable()
+```
+----
+
+### Contributions by Repository
+```{css}
+#chart {
+ margin: auto;
+}
+```
+```{r, echo = FALSE, fig.align='center'}
+fig <- contributions_by_repo(contributions)
+fig$elementId <- "chart"
+fig
+```
+
+----
+
+Are there any other areas in which it would be beneficial for me to expand?
+
+----
+
+# Thought Leadership
+## Developing a practice of meditation/mind training for the Virga Labs Team
+
+----
+
+> A regularly recurring self-care/meditation/mind training event with recorded attendance
+
+::: {.incremental .scrollable}
+
+  - ~ 38 Jedi Training sessions since Aug 16th, 2022
+  - Topics covered include:
+    - focused attention
+    - open awarenees
+    - noting
+    - yoga
+    - breathing & movement exercises
+    - cultivation of states of well-being
+    - somatic awareness
+    - emotional processing
+    - self care techniques 
+    - self inquiry
+    - attachment theory
+    - theory of mind
+    - Do we want to include some planned time for this type of activity during in-person gatherings?
+:::
+ 
+----
+
+> A discussion session on productivity strategy and follow-up survey at 1 month
+
+::: {.fragment}
+  Yet to come...
+:::
+
+# Values + Commitments
+
+## 🧐 Deep Observation
+## 🪞 Honest Reflection
+## 🦸 Radical Responsibility
+## 💡 Novel Connections
+## 👩‍🔬 Innovative Design
+
+---- 
+
+### Commitments {.scrollable}
+
+- ✓ We always show up authentically as ourselves.
+  - Maybe excessively so 😊
+  
+- ✓ We continually seek to build trust, be vulnerable both with each other and our clients.
+  - Communicating clearly, meeting deadlines
+  
+- ✓ We address issues head-on and don't let them spiral.
+  -  Made an effort to have challenging conversations as compassionately and transparently as I could when it felt important to do so
+  - Bias correction questions, Hiring process and bias mitigation, 5 x 5 qualms
+  - How can I improve?
+
+
+- We hold each other accountable by adhering to deadlines and communicating quickly to drive results.
+  - How did we do?
+  
+- We are life long learners and strive to continually deepen our understanding and apply new ideas to our work (Personally, collectively, professionally).
+  - Numerous new packages, Echarts, Javascript, Docker & Deployment, CRB current events, now Cadillac Desert
+  - Are there any areas where the company would benefit from my growth?
+
+- We strive to understand by putting ourselves in someone else's shoes by engaging in empathetic listening.
+  - I feel like everyone on the team does this well!
+  - Are there instances that I could have done better or ways in which I can listen more empathically?
+
+
+# Strategic Engagement
+## Active listening
+
+----
+
+> Participation in conversations about practical strategy not in the domain of app building UI/UX.
+
+::: {.incremental}
+  - Participation in discussion and implementation of hiring process for Associate Frontend Developer, now UX Researcher
+  - Participation in deployment resourcing discussion
+  - Potential contribution of experience to ticket / help desk system
+  - Any suggestions on my contribution?
+:::
+ 
+ 
+----
+
+> Presentation or collaborative review focused on Virga Labs Programming Resources
+
+::: {.incremental}
+   - Collaboration with Keaton & Natalie on educational on-boarding resources for developers
+   - Hacky hour / Code conferences on a recurring basis?
+
+:::
+
+----
+
+> Presentation or collaborative review focused on Virga Labs Programming Resources
+
+_Virga Labs programming resources have grown dramatically over the year_. Perhaps we can create a highlights session where each person has ten minutes to showcase their major contributions that could be of use to others, from any domain? 
+
+# What's to come in 2023?
+
+  - Deployed Apps!
+  - Symphonic Team cohesion (we hope!)
+  - In-browser Apps?
+  - Design framework?
+  - Lots more learning
+  - Present RiverViz at posit::conf(2023) Sept 17th - 20th in Chicago?
