@@ -8,8 +8,8 @@ dmdu_pulls <- get_pulls(org, "dmdu", state= "all") |>
   })
 
 weeks_pulls <- purrr::keep(dmdu_pulls, \(.x) {
-  .x$created_at > lubridate::as_date(lubridate::today() - lubridate::weeks(1)) |>
-    lubridate::floor_date("week")
+  (.x$created_at > lubridate::as_date(lubridate::today() - lubridate::weeks(1)) |>
+    lubridate::floor_date("week")) && stringr::str_detect(.x$title, "[dD]ev to [mM]ain", negate = TRUE)
 })
 
 purrr::map_chr(weeks_pulls, \(.x) {glue::glue(" - #{.x$number} @{.x$user$login}")}) |>
