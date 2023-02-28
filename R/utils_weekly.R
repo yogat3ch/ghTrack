@@ -14,7 +14,7 @@ weekly_prs <-
            state = "all",
            since = lubridate::as_date(lubridate::today() - lubridate::weeks(1), regex_remove = "[dD]ev to [mM]ain") |>
              lubridate::floor_date("week")) {
-    dmdu_pulls <- get_pulls(org, rep, state = state) |>
+    dmdu_pulls <- get_pulls(owner, repo, state = state) |>
       # Coerce string dates to datetimes
       purrr::map(\(.x) {
         purrr::modify_at(.x, \(.x) {
